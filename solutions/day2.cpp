@@ -3,13 +3,13 @@ using namespace std;
 
 bool ok(const vector<int>& a) {
     bool inc = true, dec = true, adj = true;
-        for (int i = 1; i < (int)(a.size()); ++i) {
-            if (a[i] >= a[i-1]) dec = false;
-            if (a[i] <= a[i-1]) inc = false;
-            int delta = abs(a[i] - a[i-1]);
-            if (delta < 1 || delta > 3) adj = false;
-        }
-        return adj && (dec || inc);
+    for (int i = 1; i < (int)(a.size()); ++i) {
+        if (a[i] >= a[i-1]) dec = false;
+        if (a[i] <= a[i-1]) inc = false;
+        int delta = abs(a[i] - a[i-1]);
+        if (delta < 1 || delta > 3) adj = false;
+    }
+    return adj && (dec || inc);
 }
 
 void part1() {
