@@ -3,7 +3,6 @@ using namespace std;
 
 bool ok(vector<long long>& v, long long target, long long cur, int i) {
     if (i == v.size()) return cur == target;
-    long long pow = powl(10, ceil(log10(v[i] + 1)));
     return ok(v, target, cur + v[i], i + 1) || ok(v, target, cur * v[i], i + 1);
 }
 
