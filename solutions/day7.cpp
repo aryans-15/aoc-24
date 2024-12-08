@@ -1,5 +1,4 @@
 #include <bits/stdc++.h>
-#include <string>
 using namespace std;
 
 bool ok(vector<long long>& v, long long target, long long cur, int i) {
