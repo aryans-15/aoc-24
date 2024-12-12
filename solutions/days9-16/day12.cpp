@@ -52,8 +52,7 @@ void part1() {
             if (!vis[i][j]) {
                 vector<int> v = {1, 0};
                 vis[i][j] = true;
-                set<pair<int, int>> s;
-                dfs(vis, grid, i, j, m, n, grid[i][j], v, s);
+                dfs(vis, grid, i, j, m, n, grid[i][j], v);
                 ans += v[0] * v[1];
             }
         }
